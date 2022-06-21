@@ -8,10 +8,9 @@
 </sql:query>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <title>Add Student</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -20,43 +19,37 @@
             <div id="data">
                 <h4>Add Student Details</h4>
                 <form name="InputStudentData" action="StudentDataInput.jsp" method="POST">
-                    <table>                      
-                        <tbody>
-                            <tr>
-                                <td>Student ID</td>
-                                <td>: <input type="text" name="SID"/></td>
-                            </tr>
-                            <tr>
-                                <td>Student Name</td>
-                                <td>: <input type="text" name="Sname" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> Highest Qualification </td>
-                                <td>: <input type="text" name="SHQ" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> Select Programme</td>
-                                <td>: <select class="" name="Pcode">
-                                        <c:forEach var="row" items="${ProgData.rows}">
-                                            <option value="<c:out value="${row.Pcode}"/>">
-                                                <c:out value="${row.ProgrammeName}"/>
-                                            </option>
-                                        </c:forEach>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td><td>&nbsp;&nbsp;<input type="submit" value="Submit Information" name="Submit" /></td>
-                            </tr>
-                        </tbody>
+                    <table>
+                        <tr>
+                            <td>Student ID</td>
+                            <td>: <input type="text" name="SID"/></td>
+                        </tr>
+                        <tr>
+                            <td>Student Name</td>
+                            <td>: <input type="text" name="Sname" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Highest Qualification </td>
+                            <td>: <input type="text" name="SHQ" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Select Programme</td>
+                            <td>: <select class="" name="Pcode">
+                                    <c:forEach var="row" items="${ProgData.rows}">
+                                        <option value="<c:out value="${row.Pcode}"/>">
+                                            <c:out value="${row.ProgrammeName}"/>
+                                        </option>
+                                    </c:forEach>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td><td>&nbsp;&nbsp;<input type="submit" value="Submit Information" name="Submit" /></td>
+                        </tr>
                     </table>
-
                 </form>
-
-
-
             </div>
             <%@include file= "footer.jsp"%>
         </div>

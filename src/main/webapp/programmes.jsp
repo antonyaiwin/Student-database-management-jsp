@@ -8,10 +8,9 @@
 </sql:query>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <title>Programme List</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -36,7 +35,6 @@
                         </tr>
                     </c:forEach>
                 </table>
-
             </div>
             <%@include file= "footer.jsp"%>
         </div>

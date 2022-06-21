@@ -2,21 +2,18 @@
     margin: auto;
     background-color: #ffffe4;
     font-family: sans-serif;
-    padding: 0;
     width: 75%;
     height: 100%;
-    align-content: center;
     border: 1px #26a0c1 solid;
 }
 .header h1, .footer{
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #26a0c1;
-  height: 100px;
-  margin: auto auto;
-    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #26a0c1;
+    height: 100px;
+    margin: auto auto;
 }
 #data{
     margin: 20px 20px 20px 20px;
@@ -28,52 +25,37 @@
     display: flex;
     justify-content: center;
 }
-
 .nav{
-  display: flex;
-  background-color: #ec5b14;
-  width: 100%;
-  height: 38px;
-  top: 0;
-  left: 0;
-}
-.nav{
+    display: flex;
+    background-color: #ec5b14;
+    width: 100%;
+    height: 38px;
     justify-content: center;
-  overflow: hidden;
 }
-
 .nav a{
-  display: block;
-  padding: 10px 10px 10px 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
 }
 .nav a.active{
     background-color: #d2470f;
 }
 .nav a:hover{
-  background-color: #c2470f;
+    background-color: #c2470f;
 }
 .footer{
     font-weight: bold;
-  height: 50px;
-}
-
-td{
-    padding: 5px;
+    height: 50px;
 }
 .table, .table th, .table td{
-    border: 0px solid #AAA;
+    border: 0;
     text-align: left;
     padding: 10px;
-    border-spacing: 0px;
     border-collapse: collapse;
 }
-
 .table{
     border: 1px solid #aaa;
-    padding: 0;
 }
 .table tr:nth-child(even){
     background-color: white;
@@ -85,3 +67,4 @@ td{
     background-color: #04AA6D;
     color: white;
 }
+

@@ -8,17 +8,16 @@
 </sql:query>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+        <title>Student List</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="body">
             <%@include file= "header.jsp"%><%@include file= "nav.jsp"%>
             <div id="data">
-                <sql:query var="programmename" dataSource="${student}">
+                <sql:query var="pname" dataSource="${student}">
                     SELECT ProgrammeName FROM programme
                     WHERE Pcode = ? <sql:param value="${param.Pcode}" />;
                 </sql:query>
@@ -27,7 +26,7 @@
                         value="${param.Pcode}" />;
                 </sql:query>
                 <h4>Programme:<br>
-                    <c:forEach var="progname" items="${programmename.rows}">
+                    <c:forEach var="progname" items="${pname.rows}">
                         <c:out value="${progname.ProgrammeName}"/>
                     </c:forEach> (${param.Pcode})
                 </h4>
@@ -48,7 +47,6 @@
                         </tr>
                     </c:forEach>
                 </table>
-
             </div>
             <%@include file= "footer.jsp"%>
         </div>
